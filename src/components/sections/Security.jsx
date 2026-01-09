@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { useScroll, useTransform } from "framer-motion";
 import ReactLenis from "lenis/react";
 import { useRef } from "react";
 import Lottie from "lottie-react";
@@ -8,7 +8,9 @@ import Lottie from "lottie-react";
 import lockAnimation from "../../assets/lottie/lock.json";
 
 import AlertIcone from "../../assets/icons/alert.png";
-import Mawa from "../../assets/imgs/Mawa.png";
+const _images = import.meta.globEager('../../assets/imgs/*.{png,jpg,jpeg,webp}');
+const _entry = Object.entries(_images).find(([p]) => p.toLowerCase().includes('mawa'));
+const Mawa = _entry ? _entry[1].default : ''; // fallback empty string if not found
 import G from "../../assets/imgs/mawa.png";
 import Ca from "../../assets/imgs/Ca.png";
 
