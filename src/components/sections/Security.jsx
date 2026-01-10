@@ -1,19 +1,11 @@
 "use client";
 
-import { useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import ReactLenis from "lenis/react";
 import { useRef } from "react";
 import Lottie from "lottie-react";
 
-import lockAnimation from "../../assets/lottie/lock.json";
-
-import AlertIcone from "../../assets/icons/alert.png";
-const _images = import.meta.globEager('../../assets/imgs/*.{png,jpg,jpeg,webp}');
-const _entry = Object.entries(_images).find(([p]) => p.toLowerCase().includes('mawa'));
-const Mawa = _entry ? _entry[1].default : ''; // fallback empty string if not found
-import G from "../../assets/imgs/mawa.png";
-import Ca from "../../assets/imgs/Ca.png";
-
+import lockAnimation from "../../assets/lottie/lock.json"
 import { useTranslation } from "react-i18next";
 
 /* =========================================================
@@ -147,10 +139,8 @@ export default function Security() {
                 </p>
               </div>
 
-              <div className="bg-gray-200  px-6 pt-6 sm:px-8 sm:pt-8 md:px-12 md:pt-12 flex items-end justify-center">
-                <div className="bg-white h-[400px] px-8 pt-8 pb-12 sm:px-10 sm:pt-10 sm:pb-16 md:px-12 md:pt-12 md:pb-20 rounded-t-2xl sm:rounded-t-3xl shadow-md w-full max-w-xs flex justify-center">
-                  <img src={AlertIcone} className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24" alt="Alerte" />
-                </div>
+              <div className="bg-gray-200 px-6 pt-6 sm:px-8 sm:pt-8 md:px-12 md:pt-12 flex items-end overflow-hidden justify-center">
+                <img src="/images/security/1.png" className="w-[320px] h-[400px]" />
               </div>
             </div>
           </Card>
@@ -170,17 +160,8 @@ export default function Security() {
                 </p>
               </div>
 
-              <div className="bg-gray-200 px-6 pt-6 sm:px-8 sm:pt-8 md:px-12 md:pt-12 flex items-end justify-center">
-                <div className="bg-white px-8 h-[400px] pt-8 pb-12 sm:px-10 sm:pt-10 sm:pb-16 md:px-12 md:pt-12 md:pb-20 rounded-t-2xl sm:rounded-t-3xl shadow-md w-full max-w-xs">
-                  <div className="flex flex-col items-center gap-2">
-                    <img src={Mawa} alt="Mawa" />
-                    <p className="font-semibold">Mawa</p>
-                    <img src={G} alt="Icon" />
-                    <p className="text-gray-400 font-bold text-sm">
-                      01 ** ** ** 23
-                    </p>
-                  </div>
-                </div>
+              <div className="bg-gray-200 px-6 pt-6 sm:px-8 sm:pt-8 md:px-12 md:pt-12 flex items-end overflow-hidden justify-center">
+                <img src="/images/security/2.png" className="w-[320px] h-[400px]" />
               </div>
             </div>
           </Card>
@@ -199,17 +180,10 @@ export default function Security() {
                   {t("security.cards.3.text")}
                 </p>
               </div>
-
-              <div className="bg-gray-200 px-6 pt-6 sm:px-8 sm:pt-8 md:px-12 md:pt-12 flex items-end justify-center">
-                <div className="bg-white px-8 h-[400px] pt-8 pb-12 sm:px-10 sm:pt-10 sm:pb-16 md:px-12 md:pt-12 md:pb-20 rounded-t-2xl sm:rounded-t-3xl shadow-md w-full max-w-xs">
-                  <div className="flex flex-col items-center gap-3">
-                    <img src={Ca} className="w-12 h-12" alt="Ca" />
-                    <p className="font-semibold text-center text-sm">
-                      {t("security.cards.3.caption")}
-                    </p>
-                  </div>
-                </div>
+              <div className="bg-gray-200 px-6 pt-6 sm:px-8 sm:pt-8 md:px-12 md:pt-12 flex items-end overflow-hidden justify-center">
+                <img src="/images/security/3.png" className="w-[320px] h-[400px]" />
               </div>
+
             </div>
           </Card>
         </div>

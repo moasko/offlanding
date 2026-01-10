@@ -14,14 +14,12 @@ export default function Community() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center text-center gap-4 sm:gap-5 md:gap-6">
           {/* LOGO */}
-          <div className="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center rounded-full bg-[#00C853]">
-            <img src={LogoIcon} alt="Wespee" className="w-7 h-7 sm:w-8 sm:h-8" />
-          </div>
+          <img src="/images/community/logo.jpg" alt="Wespee" className="w-16 h-16 sm:w-24 sm:h-24" />
 
           {/* BRAND */}
           <div>
             <h2
-              className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-athletics font-medium text-black"
+              className="text-3xl xs:text-4xl sm:text-6xl md:text-6xl font-athletics font-medium text-black"
               data-aos="fade-zoom-in"
               data-aos-easing="ease-in-back"
               data-aos-delay="200"
@@ -30,7 +28,7 @@ export default function Community() {
               Wespee
             </h2>
             <p
-              className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl italic font-athletics font-bold text-black"
+              className="text-3xl xs:text-4xl sm:text-6xl md:text-6xl italic font-athletics font-bold text-black"
               data-aos="fade-zoom-in"
               data-aos-easing="ease-in-back"
               data-aos-delay="600"
@@ -42,9 +40,7 @@ export default function Community() {
 
           {/* QR DESKTOP */}
           <div className="hidden md:flex flex-col items-center gap-2">
-            <div className="flex items-center justify-center bg-[#06D432] px-4 sm:px-5 py-2.5 sm:py-3 rounded-lg sm:rounded-xl shadow-lg">
-              <img src={QrCode} alt="QR code" className="h-8 w-8 sm:h-10 sm:w-10" />
-            </div>
+            <img src="/images/community/qr.png" alt="QR code" className="h-12 w-12 sm:h-32 sm:w-32" />
             <p
               className="text-xs text-black/60 font-athletics"
               data-aos="fade-zoom-in"

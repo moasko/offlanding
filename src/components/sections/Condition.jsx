@@ -5,7 +5,7 @@ export default function Conditions() {
 
   return (
     <section className="bg-white mb-12 sm:mb-16 md:mb-20">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* TITRE */}
         <h2 className="text-xl xs:text-2xl sm:text-2xl md:text-3xl font-athletics font-medium text-center mb-8 sm:mb-10 md:mb-12">

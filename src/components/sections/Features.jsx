@@ -16,12 +16,12 @@ export default function Features() {
   };
 
   return (
-    <section className="bg-[#FAFAF5] py-12 sm:py-16 md:py-20 relative overflow-hidden">
+    <section className="bg-[#FFF] py-12 sm:py-16 md:py-20 relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* BLOC TEXTE */}
         <div className="flex mb-8 sm:mb-10 md:mb-12 md:ml-10">
           <motion.div
-            className="w-full max-w-[550px] mx-auto md:mx-0 text-center md:text-left"
+            className="w-full max-w-[550px] text-left md:text-center mx-auto md:mx-0  "
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
@@ -31,14 +31,14 @@ export default function Features() {
           >
             <motion.p
               variants={fadeUp}
-              className="text-xs sm:text-sm font-medium tracking-wide mb-2 sm:mb-3 text-black/60 ml-0 md:ml-0"
+              className="text-sm sm:text-base md:text-lg font-medium tracking-wide mb-2 sm:mb-3 text-black/60 ml-0 md:ml-0"
             >
               {t("features.tagline")}
             </motion.p>
 
             <motion.h2
               variants={fadeUp}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium font-athletics mb-4 sm:mb-5 md:mb-6 ml-0 md:ml-0 leading-tight"
+              className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-medium font-athletics mb-4 sm:mb-5 md:mb-6 ml-0 md:ml-0 leading-tight"
             >
               {t("features.title-line1")}{" "}
               <span className="hidden md:inline">
@@ -54,7 +54,7 @@ export default function Features() {
                 md:block
                 w-full
                 md:max-w-xl
-                text-sm md:text-base lg:text-lg
+                text-lg md:text-xl lg:text-2xl
                 text-black/80
                 font-athletics
                 leading-relaxed
@@ -82,12 +82,12 @@ export default function Features() {
                 className="
                 w-full
                 max-w-[474px]
-                text-xs sm:text-sm
+                text-sm sm:text-base md:text-lg
                 font-circular
                 font-medium
                 text-black/80
                 mb-3 sm:mb-4
-                text-center md:text-left
+               text-left  md:text-center
               "
               >
                 {t("features.disclaimer")}
@@ -112,7 +112,7 @@ export default function Features() {
           {/* Person Image */}
           <div data-aos="fade-left" className="w-full md:w-auto">
             <div className="md:hidden mb-6 sm:mb-8 px-4">
-              <p className="text-sm sm:text-base text-black/70 font-athletics leading-relaxed">
+              <p className="text-base sm:text-lg text-black/70 font-athletics leading-relaxed">
                 {t("features.description")}
               </p>
             </div>

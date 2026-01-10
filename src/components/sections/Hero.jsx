@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import iPhone from "../../assets/imgs/iPhone.png";
 import QRCode from "../common/Web/QRCode";
 import DownloadButton from "../common/Mobile/DownloadButton";
@@ -16,6 +16,16 @@ export default function Hero() {
 
   // Opacité du conteneur principal (Fade out content as we zoom)
   const containerY = useTransform(scrollY, [0, 400], [0, 50]);
+  const [isRetracted, setIsRetracted] = useState(false);
+  const scrollValue = useTransform(scrollY, [0, 800], [0, 1]);
+
+  useEffect(() => {
+    return scrollValue.onChange((v) => {
+      if (v > 0.8) setIsRetracted(true);
+      else setIsRetracted(false);
+    });
+  }, [scrollValue]);
+
   const dimensions = useWindowDimensions();
   const screenWidth = dimensions.width;
   const screenHeight = dimensions.height;
@@ -133,14 +143,14 @@ export default function Hero() {
                 onAnimationComplete={handleTitleAnimationComplete}
               >
                 <motion.p
-                  className="text-[10px] xs:text-2xs sm:text-xs font-athletics tracking-wide mb-3 sm:mb-4 uppercase"
+                  className="text-[15px] xs:text-2xs sm:text-xs font-athletics tracking-wide mb-3 sm:mb-4"
                   variants={taglineVariants}
                 >
                   {t("hero.tagline")}
                 </motion.p>
 
                 <motion.h1
-                  className="text-3xl xs:text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-[90px] font-athletics font-medium leading-[1.1] tracking-tight text-black"
+                  className="text-[clamp(2.5rem,5vw,3rem)] xs:text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-[90px] font-athletics font-medium leading-[1.1] tracking-tight text-black"
                 >
                   <motion.span className="block" variants={titleItemVariants}>
                     {t("hero.title.line1")}
@@ -176,11 +186,10 @@ export default function Hero() {
               <div className="relative w-full flex justify-center items-end h-full">
 
                 {/* iPhone - Stays fixed in size, maybe slight scale */}
-                <motion.img
+                <img
                   src={iPhone}
                   alt="iPhone background"
                   className="absolute md:bottom-[11%] bottom-[15%] w-[220px] sm:w-[260px] md:w-[300px] h-auto z-10 opacity-90 shadow-2xl pointer-events-auto"
-                  variants={iPhoneVariants}
                 />
 
                 {/* Vision - Expands to Full Screen */}
@@ -202,9 +211,14 @@ export default function Hero() {
           </div>
 
           {/* Desktop QRCode */}
-          <div className="z-40">
-            <QRCode />
-          </div>
+          <motion.div
+            variants={imagesVariants}
+            initial="hidden"
+            animate={titleAnimationComplete ? "visible" : "hidden"}
+            className="z-40"
+          >
+            <QRCode retracted={isRetracted} />
+          </motion.div>
 
         </div>
       </section>

@@ -26,13 +26,13 @@ export default function Vision({ overlayOpacity, textOpacity }) {
         <div className=" text-white text-center md:text-left">
           <motion.p
             style={{ opacity: textOpacity }}
-            className="text-xs sm:text-sm text-white/80 mb-3 sm:mb-4 font-athletics">
+            className="text-ms sm:text-sm text-white/80 mb-3 sm:mb-4 font-athletics">
             {t("vision.tagline")}
           </motion.p>
 
           <motion.h2
             style={{ opacity: textOpacity }}
-            className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-[80px] font-athletics font-medium leading-tight">
+            className="text-4xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-[80px] font-athletics font-medium leading-tight">
             {t("vision.title-line1")} <br />
             {t("vision.title-line2")} <br />
             {t("vision.title-line3")} <br />

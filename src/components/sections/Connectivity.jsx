@@ -5,7 +5,7 @@ export default function Connectivity() {
   const { t } = useTranslation();
 
   return (
-    <section className="bg-[#FAFAF5] -mt-12 sm:-mt-16 lg:mt-0 relative overflow-hidden">
+    <section className="bg-[#FFF] -mt-12 sm:-mt-16 lg:mt-0 relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* TEXTE  */}
         <div className="flex justify-center">

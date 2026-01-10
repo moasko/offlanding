@@ -14,7 +14,7 @@ import { useTranslation } from "react-i18next";
 export default function Footer() {
   const { t } = useTranslation();
   return (
-    <footer className="bg-white border-t border-black/10">
+    <footer className="bg-white border-t border-black/10 mb-20">
       <div className="max-w-7xl mx-auto px-6 py-8 space-y-6">
 
         {/* LIGNE 1 */}
@@ -25,12 +25,12 @@ export default function Footer() {
             <img
               src={Logo}
               alt="Wespee"
-              className="w-[118px] h-[24px]"
+              className="w-[180px] h-[45px]"
             />
           </div>
 
           {/* LIENS */}
-          <div className="flex flex-col md:flex-row items-start md:items-center gap-3 md:gap-4 text-sm text-black/70">
+          <div className="flex flex-col md:flex-row items-start md:items-center gap-3 md:gap-4 text-md text-black/70">
             <a href="#" className="hover:text-black transition font-athletics">
               {t("footer.privacy")}
             </a>
@@ -45,7 +45,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
 
           {/* COPYRIGHT */}
-          <p className="text-xs text-black/60 text-left font-athletics font-normal">
+          <p className="text-md text-black/60 text-left font-athletics font-normal">
             {t("footer.rights")} ©2025{" "}
             <span className="font-athletics font-bold text-black">Bicents</span>
           </p>
